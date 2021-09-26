@@ -1,0 +1,77 @@
+.popover-wrapper {
+    position: relative;
+    width: max-content;
+    &:hover {
+        .popover-content {
+            z-index: 10;
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0);
+        }
+    }
+
+    .popover-content {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 8px);
+        width: auto;
+        transition: $transition;
+        margin-top: 8px;
+        width: max-content;
+        max-width: 300px;
+        &:before{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            // border-color: transparent transparent $dark-color transparent;
+            // transition-duration: $transition-time;
+            // transition-property: transform;
+
+            top: 0px;
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: calc(50% - 16px);
+
+            box-sizing: border-box;
+            border: 5px solid black;
+            border-color: transparent transparent #ffffff #ffffff;
+            transform-origin: 0 0;
+            box-shadow: 0 0 12px #00000044;
+            transform: rotate(135deg);
+        }
+        .popover-inner-content{
+            position: relative;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            z-index: 1;
+        }
+    }
+
+    &.p-white{
+        .popover-content{
+            .popover-inner-content{
+                color: $dark-color;
+                background-color:#fff;
+            }
+            &:before {
+                border-color: transparent transparent #fff transparent;
+            }
+        }
+    }
+
+    &.p-dark{
+        .popover-content{
+            .popover-inner-content{
+                color: white;
+                background-color: $dark-color;
+            }
+            &:before {
+                border-color: transparent transparent $dark-color transparent;
+            }
+        }
+    }
+}

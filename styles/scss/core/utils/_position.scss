@@ -1,0 +1,48 @@
+// Spacing
+
+// margin
+@include margin-variant(0, 0);
+@include margin-variant(1, .25rem);
+@include margin-variant(2, .5rem);
+@include margin-variant(3, 1rem);
+@include margin-variant(4, 1.5rem);
+@include margin-variant(5, 3rem);
+.mx-auto{
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+// padding
+@include padding-variant(0, 0);
+@include padding-variant(1, .25rem);
+@include padding-variant(2, .5rem);
+@include padding-variant(3, 1rem);
+@include padding-variant(4, 1.5rem);
+@include padding-variant(5, 3rem);
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.d-block {
+    display: block!important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

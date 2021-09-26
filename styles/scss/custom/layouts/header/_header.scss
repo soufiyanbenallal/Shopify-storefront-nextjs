@@ -1,0 +1,99 @@
+.header {
+  border-bottom: .55px solid #eee;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  padding: 20px 0;
+  .cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: #fe3b31;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFF;
+    border-radius: 50%;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: -7px;
+    li:not(:last-child){
+      margin-right: 2px;
+    }
+    a {
+      display: block;
+      height: 100%;
+      font-size: 14px !important;
+      color: $dark-color;
+      &:hover{
+        color: #000;
+      }
+
+    }
+
+    .active-link {
+      a {
+        color: $primary-color;
+      }
+    }
+  }
+
+
+  .wishlist {
+    display: block;
+
+    li a {
+      width: 100%;
+
+      &:hover {
+        background-color: #eee;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+ 
+
+}
+.hide-on-scroll {
+  display:block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow:0px 0px 20px 2px rgb(0 0 0 / 7%);
+  transition: all .4s cubic-bezier(0.65, 0.05, 0.36, 1);
+  z-index: 999;
+  background: #fafafaf7;
+  .header{
+    padding: 10px 0;
+    border-bottom: .5px solid #ccc;
+    box-shadow: 0px 3px 20px #0000001f;
+  }
+}
+
+.hide-on-scroll.hide {
+  background: rgba(255,255,255,1);
+  top: -120px;
+}
+//news
+.search {
+  position: relative;
+  border-radius: $border-radius;
+  background-color:#eee;
+  width: 100%;
+}
+
+.searchIcon {
+  padding: 10px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

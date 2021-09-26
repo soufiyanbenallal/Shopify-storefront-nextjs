@@ -1,0 +1,59 @@
+.track-container{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    height: 0.5rem;
+
+  .range-value{
+      position: absolute;
+      top: -2rem;
+    }
+    .range-value.min{
+      left: 0;
+    }
+
+    .range-value.max{
+      right: 0;
+    }
+    
+    .track,
+    .track-highlight {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 0.5rem;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .track{
+      background-color: #ccc;
+    }
+
+    .track-highlight{
+      background-color: #3498db;
+          border-radius: 10px;
+      z-index: 2;
+    }
+
+    .track-btn{
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: 1.1rem;
+      height: 1.1rem;
+      top: calc(-50% - 0.025rem);
+      margin-left: -1rem;
+      border: none;
+      background-color: white!important;
+      box-shadow: 0.5px 0.5px 3px 0px #000000d1;
+      border-radius: 50%;
+      touch-action: pan-x;
+      transition: box-shadow .3s ease-out,background-color .3s ease,-webkit-transform .3s ease-out;
+      transition: transform .3s ease-out,box-shadow .3s ease-out,background-color .3s ease;
+      transition: transform .3s ease-out,box-shadow .3s ease-out,background-color .3s ease,-webkit-transform .3s ease-out;
+    }
+  }

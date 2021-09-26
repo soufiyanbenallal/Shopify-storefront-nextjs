@@ -1,0 +1,11 @@
+// Margin utility mixin
+@mixin width-variant($id: 1, $size: $unit-1) {
+    .w-#{$id} {
+        width: $size !important;
+    }
+}
+@mixin height-variant($id: 1, $size: $unit-1) {
+    .h-#{$id} {
+        height: $size !important;
+    }
+}

@@ -1,0 +1,16 @@
+.breadcrumb {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  li {
+    &:not(:last-child) {
+      &:after {
+        content: "/";
+        margin: 0 5px;
+      }
+    }
+  }
+  .current {
+    color: #0000009a;
+  }
+}

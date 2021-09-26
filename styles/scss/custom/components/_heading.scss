@@ -1,0 +1,22 @@
+.heading {
+  margin: 0 0 30px;
+  @media (max-width: $mobile) {
+    margin: 0 0 15px;
+  }
+  .heading-title {
+    margin: 0;
+    font-size: 45px;
+    line-height: 36px;
+    @media (max-width: $tablet) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .heading-subtitle {
+    margin: 5px 0 0;
+    color: #696969;
+    p {
+      margin: 0;
+    }
+  }
+}

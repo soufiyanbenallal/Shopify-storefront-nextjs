@@ -1,0 +1,7 @@
+.container {
+  @include make-container(15px,1200px);
+  @media (max-width: $ipad) {
+    width: 100%;
+    padding: 0 15px;
+  }
+}

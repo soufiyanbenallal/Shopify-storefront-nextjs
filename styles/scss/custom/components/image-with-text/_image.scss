@@ -1,0 +1,150 @@
+.image-with-text {
+  @media (min-width: $mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .image-with-text-thumbnail {
+    @media (min-width: $mobile) {
+      width: 60%;
+    }
+  }
+  .image-with-text-details {
+    @media (min-width: $mobile) {
+      width: calc(40% - 30px);
+    }
+    @media (max-width: $mobile) {
+      margin: 15px 0 0;
+    }
+  }
+  .image-with-text-title {
+    margin: 0 0 15px;
+    font-size: 26px;
+    line-height: 36px;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .image-with-text-description {
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+  }
+  .button {
+    margin: 15px 0 0;
+  }
+  &.right {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+// Image with text overlay
+.image-with-text-overlay {
+  position: relative;
+  .image-caption {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .image-caption-title {
+    font-size: 26px;
+    line-height: 36px;
+    margin: 0 0 10px;
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .image-caption-description {
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin: 0 0 15px;
+      }
+    }
+  }
+  .button {
+    margin: 15px 0 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+  }
+  &.left {
+    .image-caption {
+      left: 0;
+      transform: translateY(-50%);
+      text-align: left;
+    }
+  }
+  &.right {
+    .image-caption {
+      right: 0;
+      transform: translateY(-50%);
+      text-align: right;
+    }
+  }
+  &.center {
+    .image-caption {
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+}
+
+// Gallery
+.gallery {
+  .gallery-item {
+    position: relative;
+  }
+  .gallery-thumbnail {
+    position: relative;
+    height: 0;
+    padding: 0 0 100%;
+    overflow: hidden;
+    img {
+      max-height: 100%;
+    }
+  }
+  img,
+  .gallery-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .gallery-caption {
+    margin: 0;
+    font-size: 18px;
+  }
+  .gallery-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  @media (max-width: $tablet) {
+    .grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: $mobile) {
+    .grid-3 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b7b7b7;
+    border-radius: 8px;
+    .list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        &:hover {
+            .star {
+                color: #ffe100;
+            }
+        }
+        .star {
+            display: inline-block;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+                ~ .star:not(.active) {
+                    color: inherit;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &.active {
+                color: #ffe100;
+            }
+        }
+    }
+    .info {
+        margin-top: 15px;
+        font-size: 40px;
+        text-align: center;
+        display: table;
+        .divider {
+            margin: 0 5px;
+            font-size: 30px;
+        }
+        .score-max {
+            font-size: 30px;
+            vertical-align: sub;
+        }
+    }
+}

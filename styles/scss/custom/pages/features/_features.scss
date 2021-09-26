@@ -1,0 +1,30 @@
+.features {
+  @for $i from 2 through 5 {
+    .grid-#{$i} {
+      @media (max-width: $tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media (max-width: $mobile) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+.feature {
+  .feature-thumbnail {
+    width: 120px;
+    margin: auto auto 10px;
+  }
+  .feature-body {
+    text-align: center;
+  }
+  .feature-title {
+    margin: 0 0 10px;
+    font-size: 15px;
+  }
+  .feature-description {
+    margin: 0;
+    font-size: 14px;
+    color: #6b7280;
+  }
+}

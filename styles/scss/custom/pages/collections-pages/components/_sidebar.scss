@@ -1,0 +1,14 @@
+.sidebar {
+    width: 20%;
+    overflow: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 5%;
+    margin-right: 20px;
+
+    .collection-link{
+        &:hover{
+            background-color: #e5e5e5;
+        }
+    }
+}

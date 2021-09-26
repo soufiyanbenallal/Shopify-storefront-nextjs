@@ -1,0 +1,69 @@
+.accordion-wrapper {
+    .accordion-content {
+        overflow-x: hidden;
+        overflow-y: auto;
+        transition: .45s ease-in-out;
+        height: auto;
+        max-height: 230px;
+        
+&::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgb(0 0 0 / 8%);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+&::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+&::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #999;
+}
+    }
+
+    .accordion-content.collapsed {
+        max-height: 0;
+    }
+
+    .accordion-title {
+        font-weight: 400;
+        cursor: pointer;
+        color: $dark-color;
+        padding: 10px 5px 10px 30px;
+        font-size: 16px;
+        border-bottom: solid .5px #ccc;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: calc(50% - 2px);
+            width: 14px;
+            height: 1px;
+            margin-top: 2px;
+            background-color: $dark-color;
+        }
+
+        &:before {
+            transition: transform .35s cubic-bezier(.65, .05, .36, 1);
+            transform: rotate(-90deg);
+        }
+
+
+        &.open {
+            &:before {
+                transform: rotate(0deg)
+            }
+        }
+    }
+
+}

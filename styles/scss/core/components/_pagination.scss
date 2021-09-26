@@ -1,0 +1,62 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.25rem;
+    li {
+        border: 2px solid $primary-color;
+        width: 100%;
+        height: 100%;
+
+        &:not(:last-child),
+        &:not(:first-child) {
+            margin-right: -2px;
+        }
+    }
+
+    &__numbers,
+    &__btn,
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    &__dots {
+        width: 2.6rem;
+        height: 2.6rem;
+        color: #cdd5f7;
+        cursor: initial;
+    }
+
+    &__numbers {
+        width: 2.6rem;
+        height: 2.6rem;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.active {
+            color: #ffffff;
+            background: $primary-color;
+            font-weight: 600;
+            border: 1px solid $primary-color;
+        }
+    }
+
+    &__btn {
+        color: #fff;
+        pointer-events: none;
+        background: $primary-color;
+
+        &.active {
+            pointer-events: initial;
+            // &:hover {
+            // }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .error-404 {
+    margin: 0;
+    font-size: 200px;
+    line-height: 0.75;
+    color: $primary-color;
+    letter-spacing: 30px;
+    text-shadow: 2px -4px #000;
+    @media (max-width: $ipad) {
+      font-size: 100px;
+    }
+  }
+
+  .error-title {
+    margin: 15px 0;
+    font-size: 32px;
+    @media (max-width: $ipad) {
+      font-size: 22px;
+    }
+  }
+}

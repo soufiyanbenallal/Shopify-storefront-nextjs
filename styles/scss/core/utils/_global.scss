@@ -1,0 +1,134 @@
+.clearfix {
+    @include clearfix();
+}
+
+.square {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100%;
+    position: relative;
+}
+.fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.round-100 {
+    border-radius: 50rem !important
+}
+
+.round {
+    border-radius: $border-radius !important
+}
+
+
+.flat {
+    border-radius: 0 !important;
+    border: none;
+}
+
+.divider {
+    width: 100%;
+    height: .55px;
+    background-color: #95959557;
+}
+.blur{
+    background: #72727287!important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.border-none {
+    border: none !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    cursor: pointer;
+    transition: visibility .25s, opacity .25s;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.z-0 {
+    z-index: 0;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+.z-4 {
+    z-index: 4;
+}
+
+.z-5 {
+    z-index: 5;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.z-100 {
+    z-index: 100;
+}
+.show-xl,
+.show-lg,
+.show-md,
+.show-sm{
+    display: none!important;
+}
+@media (max-width: map-get($media, xl)) {
+    .hidden-xl {
+        display: none !important
+    }
+    .show-xl {
+        display: block !important
+    }
+}
+
+@media (max-width: map-get($media, lg)) {
+    .hidden-lg {
+        display: none !important
+    }
+    .show-lg {
+        display: block !important
+    }
+}
+
+@media (max-width: map-get($media, md)) {
+    .hidden-md {
+        display: none !important
+    }
+    .show-md {
+        display: block !important
+    }
+}
+
+@media (max-width: map-get($media, sm)) {
+    .hidden-sm {
+        display: none !important
+    }
+    .show-sm {
+        display: block !important
+    }
+}

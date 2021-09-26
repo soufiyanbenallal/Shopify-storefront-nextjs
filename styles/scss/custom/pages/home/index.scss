@@ -1,0 +1,35 @@
+.home-page {
+    // sections menu
+    // list items
+    .category-name{
+        border-radius:$border-radius;
+        margin: 1px 0;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+     
+
+    // section collection products
+    .box{
+        background: #fff;
+        border-radius: 8px;
+        .see-all {
+            white-space: nowrap;
+            text-align: right;
+            margin-right: -15px;
+        }
+        &.box-dark{
+            .box-header {
+                color: #fff
+            }
+        }
+        &.box-with-bg{
+            background: transparent;
+        }
+    }
+}
+
+@include screen-sm {
+  
+}

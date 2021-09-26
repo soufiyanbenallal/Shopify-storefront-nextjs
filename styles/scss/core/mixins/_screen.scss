@@ -1,0 +1,20 @@
+@mixin screen-xl() {
+    @media only screen and (max-width:  map-get($media, xl)) {
+        @content;
+    }
+}
+@mixin screen-lg() {
+    @media only screen and (max-width:  map-get($media, lg)) {
+        @content;
+    }
+}
+@mixin screen-md() {
+    @media only screen and (max-width:  map-get($media, md)) {
+        @content;
+    }
+}
+@mixin screen-sm() {
+    @media only screen and (max-width:  map-get($media, sm)) {
+        @content;
+    }
+}

@@ -1,0 +1,26 @@
+.rich-text {
+  text-align: center;
+  .rich-text-title {
+    margin: 0;
+    line-height: 1.5;
+  }
+  .large {
+    font-size: 26px;
+  }
+  .medium {
+    font-size: 20px;
+  }
+  .small {
+    font-size: 16px;
+  }
+  .rich-text-description {
+    color: #696969;
+    margin: 5px 0 0;
+    p {
+      margin: 0;
+      &:not(:last-child) {
+        margin: 0 0 5px;
+      }
+    }
+  }
+}

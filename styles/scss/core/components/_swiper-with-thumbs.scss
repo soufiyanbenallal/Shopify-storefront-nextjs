@@ -1,0 +1,125 @@
+.product-swiper-section {
+    .swiper {
+
+        &.gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        &.gallery-thumbs .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        &.gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
+    }
+
+    .swiper-container {
+        .navigation {
+            top: 50%;
+            position: absolute;
+            z-index: 100;
+            color: #fff;
+            background: #000000b4;
+            margin: 0 20px;
+            height: 35px;
+            width: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 30px 15px #ffffff2e;
+
+            &:hover {
+                background: #000;
+            }
+        }
+
+        .swiper-button-next {
+            right: 0;
+            left: auto;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+
+        }
+
+        .swiper-button-disabled {
+            opacity: .2;
+
+        }
+    }
+
+    .radio {
+        label {
+
+            &:after,
+            &:before {
+                width: 10px;
+                height: 10px;
+            }
+
+            &:before {
+                border: 1px solid #e5e5e5;
+            }
+
+            &:after {
+                left: 0;
+                margin-top: 5px!important;
+                border: 1px solid;
+            }
+        }
+    }
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        padding-bottom: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .gallery-top {
+        width: 100%;
+    }
+
+    .gallery-thumbs {
+        box-sizing: border-box;
+        padding: 5px 0;
+        width: 65%;
+        margin-top: 10px;
+
+        .preview-slider {
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            padding: 2px;
+        }
+
+        .swiper-slide-active {
+            border: 1px solid #f02828;
+
+        }
+    }
+
+    .gallery-thumbs .swiper-slide {
+        opacity: 0.8;
+    }
+
+    .gallery-thumbs .swiper-slide-active {
+        opacity: 1;
+    }
+}

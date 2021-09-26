@@ -1,0 +1,14 @@
+.topbar {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  background-color: $dark-color;
+  a{
+    color: #fff;
+    font-size: 13px;
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+  }
+}

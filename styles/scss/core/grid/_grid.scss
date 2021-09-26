@@ -1,0 +1,18 @@
+.is-grid { 
+    width: 100%;
+    display: grid; 
+    &.gap { gap: .5rem; }
+    &.gap-1 { gap: 1rem; }
+    &.gap-2 { gap: 2rem; }
+    &.gap-3 { gap: 3rem; }
+    &.gap-4 { gap: 4rem; }
+    &.gap-5 { gap: 5rem; }
+    @for $i from $min-grid through $max-grid {
+        &.grid-#{$i} { grid-template-columns: repeat($i, 1fr); }
+        &.grid-auto-#{$i} { grid-template-columns: auto $i+fr; }
+        &.grid-#{$i}-auto { grid-template-columns: $i+fr auto; }
+    }
+    @import 'media';
+    @import 'cols';
+    @import 'rows';
+}

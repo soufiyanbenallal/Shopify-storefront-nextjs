@@ -1,0 +1,32 @@
+{
+  "name": "wevente",
+  "version": "4.0.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.3.12",
+    "@material-ui/core": "latest",
+    "axios": "^0.21.1",
+    "clsx": "latest",
+    "formik": "^2.2.6",
+    "graphql": "^15.5.0",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-image-lightbox": "^5.1.1",
+    "react-image-magnify": "^2.7.4",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-waypoint": "^9.0.3",
+    "swiper": "^6.5.0",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
+  },
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

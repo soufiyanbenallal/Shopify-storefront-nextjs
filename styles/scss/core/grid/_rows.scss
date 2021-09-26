@@ -1,0 +1,28 @@
+&.row {
+    &s {
+        &-start { align-items: start; }
+        &-center { align-items: center; }
+        &-end { align-items: end; }
+        &-stretch { align-items: stretch; }
+
+        &-between { align-content: space-between; }
+        &-around { align-content: space-around; }
+        &-evenly { align-content: space-evenly; }
+        
+        &-gap { row-gap: 1em; }
+        &-gap-2 { row-gap: 2em; }
+        &-gap-3 { row-gap: 3em; }
+        &-gap-4 { row-gap: 4em; }
+        &-gap-5 { row-gap: 5em; }
+    }
+    &-start { align-self: start; width: initial; }
+    &-center { align-self: center; width: initial; }
+    &-end { align-self: end; width: initial; }
+    &-stretch { align-self: stretch; width: initial; }
+}
+> .row {
+    &-start { align-self: start; }
+    &-center { align-self: center; }
+    &-end { align-self: end; }
+    &-stretch { align-self: stretch; }
+}

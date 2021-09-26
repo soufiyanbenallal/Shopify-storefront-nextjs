@@ -1,0 +1,11 @@
+.tabs {
+    li {
+        cursor: pointer;
+        &:not(:last-child){
+            margin-right: 15px;
+        }
+        &.is-active{ 
+            border-bottom: 1px solid $dark-color;
+        }
+    }
+}

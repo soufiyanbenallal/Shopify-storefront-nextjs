@@ -1,0 +1,55 @@
+@mixin for-size($size) {
+    @if $size==phone {
+        @media (max-width: 599px) {
+            @content;
+        }
+    }
+
+    @else if $size==tablet {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $size==tablet-portrait {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+
+    @else if $size==tablet-landscape {
+        @media (max-width: 900px) {
+            @content;
+        }
+    }
+
+    @else if $size==desktop {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+
+    @else if $size==big-desktop {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}
+
+.is-grid {
+    display: grid;
+    grid-gap: 15px;
+}
+
+@for $i from 2 through 10 {
+    .grid-#{$i} {
+        grid-template-columns: repeat($i, 1fr);
+    }
+}
+.grid-5{
+    @include for-size(tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include for-size(tablet-landscape) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

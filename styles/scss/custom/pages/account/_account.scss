@@ -1,0 +1,31 @@
+.auth-form {
+  @media (min-width: $tablet) {
+    width: 500px;
+    margin: auto;
+  }
+  .input-icon-holder {
+    a {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+  }
+  .flex-form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .checkbox {
+      flex: 1 0 0;
+    }
+  }
+  .flex-end-group {
+    display: flex;
+    justify-content: flex-end;
+  }
+  @media (max-width: $tablet) {
+    .is-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

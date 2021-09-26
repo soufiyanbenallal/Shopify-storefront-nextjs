@@ -1,0 +1,125 @@
+.collections-page {
+
+    .alert {
+        text-align: center;
+        font-size: 20px;
+
+        .icon {
+            font-size: 70px;
+            color: #fe3b31;
+        }
+    }
+
+    .placeholder-content {
+        border-radius: $border-radius;
+    }
+
+    .side-search {
+        input {
+            height: 26px;
+            width: calc(100% - 16px);
+            margin: 0 8px 12px;
+        }
+
+    }
+
+    .filter-color {
+        .list-group {
+            text-align: center;
+            margin-bottom: 25px;
+
+            li {
+                border: none !important;
+
+                &:hover {
+                    background-color: #0000 !important;
+                }
+            }
+        }
+
+        input[type=checkbox]+label:active:before {
+            transform: inherit;
+        }
+
+        input[type=checkbox]+label {
+            padding: 0;
+        }
+
+        input[type=checkbox]+label:before {
+            border: none !important;
+            border-radius: 5em;
+            color: #fff0;
+            line-height: 1.1;
+            text-align: center;
+            padding: 8px;
+            background-color: var(--color);
+        }
+
+        input[type=checkbox]:checked+label:before {
+            background-color: var(--color);
+            color: #fff;
+            box-shadow: 0 0 8px -2px #de3618;
+            text-shadow: 0 0 4px #000000ad;
+
+        }
+
+        input[type=checkbox]+label {
+            display: block;
+            cursor: pointer;
+            padding: 4px 10px;
+        }
+
+        input[type=checkbox] {
+            display: none;
+        }
+
+        input[type=checkbox]+label:before {
+            content: "\2714";
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            margin-right: 0.2em;
+            vertical-align: bottom;
+            color: transparent;
+            transition: .2s;
+        }
+
+        input[type=checkbox]+label:active:before {
+            transform: scale(0);
+        }
+
+
+
+
+    }
+
+    .wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+
+        @import './components/sidebar';
+        
+        .main-content {
+            width: 80%;
+            height: fit-content;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .wrapper {
+            display: block;
+
+            .sidebar,
+            .main-content {
+                width: 100% !important;
+                position: relative;
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+.subscribe {
+  display: flex;
+  margin: auto;
+  @media (min-width: $mobile) {
+    width: 450px;
+  }
+  @media (max-width: $mobile) {
+    display: grid;
+    grid-gap: 10px;
+  }
+  input {
+    margin: 0 10px 0 0;
+    @media (max-width: $mobile) {
+      margin: 0;
+    }
+  }
+  .button {
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+  }
+}

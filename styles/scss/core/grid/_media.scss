@@ -1,0 +1,31 @@
+@media (max-width: map-get($media, xl)) {
+    @for $i from $min-grid through $max-grid {
+        &.grid-xl-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+}
+
+@media (max-width: map-get($media, lg)) {
+    @for $i from $min-grid through $max-grid {
+        &.grid-lg-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+}
+
+@media (max-width: map-get($media, md)) {
+    @for $i from $min-grid through $max-grid {
+        &.grid-md-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+}
+
+@media (max-width: map-get($media, sm)) {
+    @for $i from $min-grid through $max-grid {
+        &.grid-sm-#{$i} {
+            grid-template-columns: repeat($i, 1fr);
+        }
+    }
+}

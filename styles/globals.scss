@@ -1,0 +1,345 @@
+@import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+@import 'react-perfect-scrollbar/dist/css/styles.css';
+.lds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto,Segoe UI,  Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, sans-serif;
+}
+
+$red : #FA233B;
+$blue : #007AFF;
+$round : 8px;
+$sectionHome : 400px;
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+.svg-icon{
+    width:22px;
+    color:#1c1c1c;
+}
+.standard-qte {
+    background: #97919129;
+    border: none;
+    text-align: center;
+    max-width: 70px;
+    outline: none;
+    margin: 5px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+.ellipsis {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 33px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+}
+
+.ellipsis-1 {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-2 {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.swiper-container {
+
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 50%;
+        position: absolute;
+        z-index: 100;
+        color: #fff;
+        background: #000000b4;
+        margin: 0 20px;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        transform: translateY(-50%);
+        box-shadow: 0 0 30px 15px #ffffff2e;
+        width: 30px;
+        background: #0000008f;
+        height: 30px;
+        color: #fff;
+        border-radius: 50%;
+        outline: none !important;
+        transition: all .2s ease-in-out;
+
+        &:active {
+            transform: translate(0px) scale(.9) !important;
+            background: #000000c7;
+        }
+
+        &:hover {
+            background: #000000aa;
+        }
+    }
+
+    .swiper-button-next {
+        padding-left: 2px;
+        transform: translateX(100px);
+        right: 0;
+        left: auto;
+    }
+
+    .swiper-button-prev {
+        padding-right: 2px;
+        transform: translateX(-100px);
+        left: 0;
+
+    }
+
+    .swiper-button-disabled {
+        opacity: .2;
+
+    }
+
+    &:hover .swiper-button-prev,
+    &:hover .swiper-button-next {
+
+        transform: translate(0px);
+    }
+
+    .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+.logo {
+    line-height: 15px;
+}
+
+.MuiButton-root {
+    border-radius: 100px !important;
+    font-size: 0.75rem !important;
+}
+
+.MuiOutlinedInput-root {
+    border-radius: 8px !important;
+}
+
+
+
+.btn,.button,.hover {
+    text-transform: capitalize;
+    padding: 8px 15px;
+    border-radius: 3rem;
+    overflow: hidden;
+    position: relative;
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 5rem;
+        background-color: #9498983b;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        opacity: 0;
+        transition: all .25s ease-out;
+        z-index: -1;
+    }
+
+    &:hover {
+        position: relative;
+
+        &::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+}
+
+.button-mui {
+    text-transform: capitalize;
+    border-radius: 3rem !important;
+    line-height: 10px;
+    background-color: #0000 !important;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 5rem;
+        background-color: #546e7a17;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: scale(0);
+        opacity: 0;
+        transition: all .15s ease-in-out;
+        // border: .55px solid #546e7a07;
+    }
+
+    &:hover {
+        position: relative;
+
+        &::after {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+}
+
+.ril__navButtons {
+    width: 20px !important;
+    height: 20px !important;
+    padding: 22px 22px !important;
+    margin: auto 10px !important;
+    border-radius: 3rem;
+    background-size: 13px !important;
+    outline: none !important;
+    transition: all .2 cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+        background-color: #000;
+    }
+}
+
+
+
+.MuiTab-root {
+    text-transform: capitalize !important;
+}
+
+.home-wrapper {
+
+    .swiper-container,
+    .side-categories {
+        height: $sectionHome;
+    }
+}
+
+
+
+.home-page {
+    .mega-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+        width: 100%;
+        height: calc(100% - 8px);
+        transition: all .15s ease-in-out;
+        border-radius: 0px 0.75rem 0.75rem 0px !important;
+        background: #fff !important;
+        border-left: 1px solid #eee;
+        max-width: calc(80% + 5px);
+        display: none;
+        text-align: left;
+        overflow: hidden;
+        // margin-right: 18%;
+        margin-left: 20%;
+        .mega-menu-left{
+            h4{
+                color: #000;
+                font-weight: 600;
+                letter-spacing: 0.6px;
+                margin-bottom: 10px;
+            }
+            ul{
+                line-height: 2;
+            }
+        }
+    }
+    
+
+    
+    .category-name:hover~.mega-menu{
+        display: block;
+    }
+    .side-categories{
+        position: inherit!important;
+        border-radius: 8px;
+        background-color: #fff!important;
+        overflow: hidden;
+    
+    }
+    .side-categories .mega-menu{
+        border-radius: 8px;
+    }
+    .side-categories:hover .mega-menu{
+        display: block;
+    }
+    .side-categories:hover {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+    .swiper-container {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        margin-bottom: 0px !important;
+    }
+
+    .home-banner {
+        background-image: url("//s.alicdn.com/@img/imgextra/i1/O1CN01WEbW4Q1ei4szTCbvv_!!6000000003904-0-tps-1500-60.jpg");
+        width: 100%;
+        height: 60px;
+        display: flex;
+    }
+
+    ion-icon {
+        font-size: 20px;
+    }
+}
+.grid-with-img > *:first-child{
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.big-title{
+    font-size: 50px;
+}

@@ -1,0 +1,122 @@
+.select {
+    min-width: 100px;
+    position: relative;
+
+    .select-toggle {
+        color: #636b6f;
+        min-width: 100px;
+        text-transform: none;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        height: 100%;
+        label {
+            text-align: left;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .select-toggle:hover {
+            cursor: pointer;
+        }
+
+        .select-input {
+            position: relative;
+            height: 100%;
+
+            input {
+                padding-right: 42px;
+                height: 100%;
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:focus {
+                    cursor: text;
+                    &::placeholder {
+                        opacity: 0.7 !important;
+                    }
+                }
+            }
+        }
+
+        .caret {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            line-height: 0;
+            cursor: pointer;
+
+            &.caret-x {
+                right: 20px;
+                padding: 3px;
+                border-radius: 20px;
+                transition: $transition;
+
+                &:hover {
+                    background: #444;
+                    color: #fff;
+                }
+            }
+
+            &.caret-down {
+                right: 6px;
+            }
+        }
+    }
+
+    .select-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        min-width: 100px;
+        margin: 2px 0 0;
+        color: $dark-color;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        background-clip: padding-box;
+        padding: 4px;
+        text-align: left;
+        max-height: 250px;
+        overflow-y: auto;
+        z-index: 10;
+
+        li {
+
+            &.active {
+                font-weight: bold;
+                cursor: pointer;
+                color: #ff3b32
+            }
+
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            margin: 0;
+
+            div {
+                text-align: center;
+                padding: 6px 15px;
+                border-radius: $border-radius;
+                display: block;
+                white-space: nowrap;
+            }
+
+            span {
+                padding: 6px 15px;
+                border-radius: $border-radius;
+                display: block;
+                white-space: nowrap;
+
+                &:hover {
+                    background: #efefef;
+                    color: #0c3ef3;
+                }
+            }
+        }
+
+    }
+}

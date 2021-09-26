@@ -1,0 +1,38 @@
+//text
+.text-primary {
+    color: $primary-color!important;
+}
+.text-secondary {
+    color: $secondary-color!important;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+.text-dark {
+    color: $dark-color!important;
+}
+
+.text-red {
+    color: #f64426!important;
+}
+
+.bg-primary {
+    background-color: var(--bg-color)!important;
+}
+
+.bg-secondary {
+    background-color: $secondary-color!important;
+}
+
+.bg-white {
+    background-color: #fff!important;
+}
+
+.bg-dark {
+    background-color: $dark-color!important;
+}
+.bg-transparent {
+    background-color: transparent!important;
+}

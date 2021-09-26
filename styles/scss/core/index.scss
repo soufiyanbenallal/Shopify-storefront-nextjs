@@ -1,0 +1,23 @@
+//all variables 
+@import "variables/all";
+
+// //basics style
+// @import "base/normalize";
+@import "base/format";
+
+//all mixins
+@import "mixins/all";
+
+//layouts
+@import "layouts/container";
+@import "layouts/section";
+
+//grid
+@import "grid/grid";
+
+//all components
+@import "components/all";
+
+//all utilities
+@import "utils/all";
+

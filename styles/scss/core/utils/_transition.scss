@@ -1,0 +1,29 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+.fade-up-enter,
+.fade-up-leave-to {
+  transform: translateY(8px);
+  opacity: 0;
+}
+
+.collapsed-enter-active,
+.collapsed-leave-active {
+  transition: all 0.2s;
+  max-height: 230px;
+}
+.collapsed-enter,
+.collapsed-leave-to
+{
+  opacity: 0;
+  max-height: 0px;
+}

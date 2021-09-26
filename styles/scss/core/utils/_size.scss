@@ -1,0 +1,8 @@
+// Width 
+@include width-variant(100, 100%);
+@include width-variant(75, 75%);
+@include width-variant(50,50%);
+@include width-variant(25, 25%);
+
+// height 
+@include height-variant(100, 100%);

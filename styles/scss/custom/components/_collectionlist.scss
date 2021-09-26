@@ -1,0 +1,20 @@
+.collectionlist {
+    &-item {
+        -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.02); 
+        box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.02);
+    }
+    &-info {
+        text-align: center;
+    }
+    .collectionlist-item{
+        .collectionlist-thumbnail{
+            height: 100%;
+            img{
+                border-style: none;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

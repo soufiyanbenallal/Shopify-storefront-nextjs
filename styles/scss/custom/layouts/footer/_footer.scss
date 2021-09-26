@@ -1,0 +1,9 @@
+.footer {
+  .social-media {
+    font-size: 22px;
+    justify-content: center;
+    ion-icon:not(:last-child){
+      margin-right: 12px;
+    }
+  }
+}

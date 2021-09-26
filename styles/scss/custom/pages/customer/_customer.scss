@@ -1,0 +1,16 @@
+.customers {
+    padding: 65px 0;
+    .form-content {
+        max-width: 392px;
+        margin: auto;
+        .heading-form {
+            grid-gap: 48px !important;
+            .error {
+                color: red;
+            }
+            .link-control {
+                text-align: right;
+            }
+        }
+    }
+}

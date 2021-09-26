@@ -1,0 +1,39 @@
+// flex 
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.f-space-between {
+    justify-content: space-between;
+}
+
+.fy-center {
+    align-items: center;
+}
+
+.fx-center {
+    justify-content: center;
+}
+
+.fy-start {
+    align-items: flex-start;
+}
+
+.fx-start {
+    justify-content: flex-start;
+}
+
+.fy-end {
+    align-items: flex-end;
+}
+
+.fx-end {
+    justify-content: flex-end;
+}
+
+.f-center {
+    justify-content: center;
+    align-items: center;
+}
